@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  /* background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+}
+
+
+.banner{
+  /* width: 100vw; */
+  height: 100vh;
+  background: url("../../public//images/hero/hero-img.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.hamburger{
+  display: none;
+}
+
+
+
+@media screen and (max-width:768px) {
+  /* menu drawer */
+  .hamburger{
+    display:inherit;
+  }
+  
+ 
+  /* footer */
+
+  .footer{
+    width: 100vw;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+
+  }
+  .footer-inner{
+    /* width: 100vw; */
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .footercont{
+    text-align: center;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  /* navbar */
+
+  .navlink, .join-btn{
+    display: none;
+  }
+  
+}
